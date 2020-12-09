@@ -2,55 +2,55 @@ import React from 'react'
 import { Button, Col, Container, Form } from 'react-bootstrap'
 import Menu from '../components/Menu'
 
-export default function Product(){
+export default function CreateProduct(){
     return (
         <><Menu />
             <Container>
+                <h3>Cadastro de Produto</h3>
                 <Form>
                     <Form.Row>
-                        <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Group as={Col} controlId="formGridCode">
+                            <Form.Label>Código do produto</Form.Label>
+                            <Form.Control type="text" placeholder="Informe o código EAN" />
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
+                        <Form.Group as={Col} controlId="formGridName">
+                            <Form.Label>Nome do produto</Form.Label>
+                            <Form.Control type="text" placeholder="Informe o nome" />
                         </Form.Group>
                     </Form.Row>
 
-                    <Form.Group controlId="formGridAddress1">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control placeholder="1234 Main St" />
-                    </Form.Group>
-
-                    <Form.Group controlId="formGridAddress2">
-                        <Form.Label>Address 2</Form.Label>
-                        <Form.Control placeholder="Apartment, studio, or floor" />
+                    <Form.Group controlId="formGridDescription">
+                        <Form.Label>Descrição do produto</Form.Label>
+                        <Form.Control as="textarea" rows={3} placeholder="Informe a ficha tecnica do produto" />
                     </Form.Group>
 
                     <Form.Row>
-                        <Form.Group as={Col} controlId="formGridCity">
-                            <Form.Label>City</Form.Label>
-                            <Form.Control />
+                        <Form.Group as={Col} controlId="formGridmodel">
+                            <Form.Label>Modelo</Form.Label>
+                            <Form.Control type="text" placeholder="Informe o modelo" />
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridState">
-                            <Form.Label>State</Form.Label>
-                            <Form.Control as="select" defaultValue="Choose...">
-                                <option>Choose...</option>
-                                <option>...</option>
-                            </Form.Control>
+                        <Form.Group as={Col} controlId="formGridBrand">
+                            <Form.Label>Marca</Form.Label>
+                            <Form.Control type="text" placeholder="Informe a marca" />
+                        </Form.Group>
+                    </Form.Row>
+                    <Form.Row>
+                        <Form.Group as={Col} controlId="formGridSize">
+                            <Form.Label>Tamanho</Form.Label>
+                            <Form.Control type="text" placeholder="Informe o tamanho" />
                         </Form.Group>
 
-                        <Form.Group as={Col} controlId="formGridZip">
-                            <Form.Label>Zip</Form.Label>
-                            <Form.Control />
+                        <Form.Group as={Col} controlId="formGridColor">
+                            <Form.Label>Cor do produto</Form.Label>
+                            <Form.Control type="text" placeholder="Informe a cor" />
                         </Form.Group>
                     </Form.Row>
 
+
                     <Form.Group id="formGridCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
+                        <Form.Check type="checkbox" label="Ativo" />
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
