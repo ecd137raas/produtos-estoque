@@ -19,7 +19,7 @@ export default function Product(){
     const [products, setProducts] = useState<Products>();
         
     useEffect(() => {
-        api.get('api/product').then(data => {
+        api.get('/api/product').then(data => {
             setProducts(data.data);
             console.log(data)
         })
