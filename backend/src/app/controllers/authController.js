@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
         });
 
     } catch (err) {
-        return res.status(400).send({ error: 'Falha no cadastro'});
+        return res.status(400).send({ error: err+'Falha no cadastro'});
     }
 });
 

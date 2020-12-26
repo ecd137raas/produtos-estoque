@@ -17,11 +17,9 @@ async function handleSubmit(event: FormEvent) {
       event.preventDefault();
   
       const data = new FormData();
-      data.append('name', name);
-      data.append('email', email);
+      data.append('name', String(name));
+      data.append('email', String(email));
       data.append('password', String(password));
-      
-      console.log(data)
 
       await api.post('/auth/register', data);
   
